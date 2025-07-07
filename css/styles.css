@@ -1,0 +1,377 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: transparent;
+  color: #fafcfd;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background: transparent;
+  color: #fff;
+  padding: 1rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.navbar nav {
+  display: flex;
+  gap: 2rem;
+}
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+.navbar nav a:hover {
+  color: #b9b26c;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  position: relative;
+  background: url('../images/two-girls.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45); /* dark overlay */
+  z-index: 1;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.cta-btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.cta-btn:hover {
+  background: #fff;
+  color: #222;
+}
+
+.features {
+  padding: 3rem 0;
+  background: #000;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.feature-card {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(87,109,44,0.07);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+.feature-card:hover {
+  box-shadow: 0 4px 24px rgba(26,34,56,0.13);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+.feature-card h2 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+.feature-card p {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0 1rem 0;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .navbar .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+.booking-hero {
+  position: relative;
+  background: url('../images/couple.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.booking-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.booking-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.modern-form {
+  background: transparent;
+  border-radius: 24px;
+  box-shadow: none;
+  padding: 0;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.modern-form label {
+  font-weight: 600;
+  color: #fff;
+}
+
+.modern-form input[type="text"],
+.modern-form input[type="email"],
+.modern-form input[type="date"],
+.modern-form input[type="time"],
+.modern-form input[type="file"],
+.modern-form textarea {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  background: transparent;
+  color: #fff;
+}
+
+.modern-form input[type="file"] {
+  padding: 0.3rem 0;
+  background: #fafafa;
+}
+
+.modern-form textarea {
+  resize: vertical;
+}
+
+.modern-form .cta-btn,
+.modern-form button[type="submit"] {
+  margin-top: 1.5rem;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 0.7rem 0;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.modern-form .cta-btn:hover,
+.modern-form button[type="submit"]:hover {
+  background: #fff;
+  color: #2563eb;
+}
+
+.feedback-hero {
+  position: relative;
+  background: url('../images/girl-sewing.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.feedback-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.feedback-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.orders-hero {
+  position: relative;
+  background: url('../images/Lady on the car.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.orders-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.orders-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+body.booking-page {
+  background: #2b1a0e;
+}
+
+body.orders-page {
+  background: url('../images/lady-car.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+body.orders-page::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body.orders-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+body.profiles-page {
+  background: url('../images/greenbg.jpg') center/cover no-repeat !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  position: relative;
+}
+
+body.profiles-page.fallback-bg {
+  background: url('/images/greenbg.jpg') center/cover no-repeat !important;
+}
+
+body.profiles-page::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body.profiles-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+body.profiles-page .feature-card {
+  background: transparent !important;
+  color: #222 !important;
+}
+
+.container, main, section.container {
+  background: transparent !important;
+} 

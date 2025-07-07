@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Fitting - modernFIT</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="booking-page">
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">modernFit</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="profiles.html">Designers & Tailors</a>
+        <a href="booking.html">Book Fitting</a>
+        <a href="orders.html">Orders</a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="booking-hero" style="padding: 3rem 0; max-width: 500px;">
+      <h1 style="text-align:center; margin-bottom:2rem;">Book a Fitting / Upload Measurements</h1>
+      <form class="modern-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="measurements">Upload Measurements (PDF/JPG/PNG)</label>
+        <input type="file" id="measurements" name="measurements" accept=".pdf,.jpg,.jpeg,.png">
+        <label for="date">Preferred Fitting Date</label>
+        <input type="date" id="date" name="date">
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" name="time">
+        <button type="submit" class="cta-btn" style="margin-top:1.5rem; width:100%;">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 modernFIT. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
